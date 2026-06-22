@@ -1,0 +1,12 @@
+/* App.css */
+
+#root{
+  width:100%;
+  min-height:100vh;
+} 
+.section-divider{
+  width:100%;
+  height:2.5px;
+  background:rgba(235, 228, 228, 0.801);
+  margin:0;
+}

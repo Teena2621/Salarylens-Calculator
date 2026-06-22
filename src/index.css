@@ -1,0 +1,23 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+   font-family:'Outfit',sans-serif;
+
+  background:
+  radial-gradient(
+    circle at center,
+    #051735 0%,
+    #01091a 60%,
+    #000814 100%
+  );
+
+  color:white;
+  overflow-x:hidden;
+}
+html{
+  scroll-behavior:smooth;
+}
