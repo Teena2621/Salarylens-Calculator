@@ -266,10 +266,16 @@ const pieData = [
               <div className="ctc-box">
   <span className="rupee">₹</span>
   <input
-  type="number"
   className="ctc-input"
+  type="text"
+  inputMode="numeric"
+  pattern="[0-9]*"
   value={ctc}
-  onChange={(e) => setCtc(e.target.value)}
+  onChange={(e) => {
+    const value = e.target.value.replace(/[^0-9]/g, "");
+    setCtc(value);
+  }}
+  placeholder="Enter CTC"
 />
 </div>
 
@@ -339,13 +345,15 @@ const pieData = [
     <span>Max ₹1.5L</span>
   </div>
 
-   <input
-  type="number"
+  <input
+  type="text"
+  inputMode="numeric"
   className="deduction-input"
   placeholder="₹ Enter amount"
   value={investment80C}
   onChange={(e)=>{
-    const value = e.target.value;
+    const value =
+      e.target.value.replace(/[^0-9]/g, "");
 
     if(value === ""){
       setInvestment80C("");
@@ -376,13 +384,15 @@ const pieData = [
     <span>Max ₹75K</span>
   </div>
 
-   <input
-  type="number"
+  <input
+  type="text"
+  inputMode="numeric"
   className="deduction-input"
   placeholder="₹ Enter amount"
   value={health80D}
   onChange={(e)=>{
-    const value = e.target.value;
+    const value =
+      e.target.value.replace(/[^0-9]/g, "");
 
     if(value === ""){
       setHealth80D("");
@@ -415,13 +425,15 @@ const pieData = [
     <span>Max ₹2L</span>
   </div>
 
-   <input
-  type="number"
+  <input
+  type="text"
+  inputMode="numeric"
   className="deduction-input"
   placeholder="₹ Enter amount"
   value={homeLoan24B}
   onChange={(e)=>{
-    const value = e.target.value;
+    const value =
+      e.target.value.replace(/[^0-9]/g, "");
 
     if(value === ""){
       setHomeLoan24B("");
